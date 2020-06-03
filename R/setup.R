@@ -84,19 +84,20 @@ check_any_data_issues = function(data, target, weights) {
   }
 
   # Do any variables in the target weights not sum to 1?
-  weight_sum_errors = lapply(names(target), function(variable) {
-    sum_target = sum(target[[variable]])
-    if(sum_target == 1) {
-      return(NULL)
-    }
+##   
+## weight_sum_errors = lapply(names(target), function(variable) {
+##    sum_target = sum(target[[variable]])
+##    if(sum_target == 1) {
+##      return(NULL)
+##    }
 
-    paste0("Target variable `", variable, "` has targets that do not sum ",
+##    paste0("Target variable `", variable, "` has targets that do not sum ",
            "to 1.")
-  })
-  weight_sum_errors = paste0(unlist(weight_sum_errors), collapse = "\n")
-  if(nchar(weight_sum_errors) > 0) {
-    stop("Errors detected in weight targets:\n", weight_sum_errors)
-  }
+##  })
+##  weight_sum_errors = paste0(unlist(weight_sum_errors), collapse = "\n")
+##  if(nchar(weight_sum_errors) > 0) {
+##    stop("Errors detected in weight targets:\n", weight_sum_errors)
+##  }
 
   # Do any target variables have any negative weight levels?
   neg_weight_errors = lapply(names(target), function(variable) {
