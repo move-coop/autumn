@@ -92,7 +92,7 @@ check_any_data_issues = function(data, target, weights) {
 ##    }
 
 ##    paste0("Target variable `", variable, "` has targets that do not sum ",
-           "to 1.")
+##           "to 1.")
 ##  })
 ##  weight_sum_errors = paste0(unlist(weight_sum_errors), collapse = "\n")
 ##  if(nchar(weight_sum_errors) > 0) {
